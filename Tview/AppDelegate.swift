@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Tview
 //
-//  Created by 1001914 on 2015. 7. 3..
+//  Created by daclouds on 2015. 7. 3..
 //
 //
 
