@@ -13,6 +13,7 @@
 		ED6909281B4691330077E947 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6909271B4691330077E947 /* ViewController.swift */; };
 		ED69092B1B4691330077E947 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6909291B4691330077E947 /* Main.storyboard */; };
 		ED69092D1B4691330077E947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED69092C1B4691330077E947 /* Assets.xcassets */; };
+		ED9E716E1B579CCE000D9A4D /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED9E716D1B579CCE000D9A4D /* Launch Screen.xib */; };
 		EDC529191B5411AE0087866C /* hoppin.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDC529181B5411AE0087866C /* hoppin.plist */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		ED69092A1B4691330077E947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED69092C1B4691330077E947 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED6909311B4691330077E947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED9E716D1B579CCE000D9A4D /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "../Launch Screen.xib"; sourceTree = "<group>"; };
 		EDC529181B5411AE0087866C /* hoppin.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = hoppin.plist; path = ../hoppin.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +60,7 @@
 		ED6909241B4691330077E947 /* Tview */ = {
 			isa = PBXGroup;
 			children = (
+				ED9E716D1B579CCE000D9A4D /* Launch Screen.xib */,
 				EDC529181B5411AE0087866C /* hoppin.plist */,
 				ED6909251B4691330077E947 /* AppDelegate.swift */,
 				ED6909271B4691330077E947 /* ViewController.swift */,
@@ -128,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC529191B5411AE0087866C /* hoppin.plist in Resources */,
+				ED9E716E1B579CCE000D9A4D /* Launch Screen.xib in Resources */,
 				ED69092D1B4691330077E947 /* Assets.xcassets in Resources */,
 				ED69092B1B4691330077E947 /* Main.storyboard in Resources */,
 			);
