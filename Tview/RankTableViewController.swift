@@ -61,7 +61,7 @@ class RankTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
 
         // Configure the cell...
         cell.textLabel?.text = seriesList[indexPath.row].title
@@ -126,16 +126,13 @@ class RankTableViewController: UITableViewController {
 //                let result = NSString(data: data!, encoding:
 //                    NSASCIIStringEncoding)!
                 
-                do {
-                    let parseResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
-//                    print(parseResult)
-                    callback(parseResult as NSDictionary, nil)
-                } catch {
-                    print(error)
-                }
+                var parseError: NSError?
+                let parseResult = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments, error: nil) as! NSDictionary
+                //                    print(parseResult)
+                callback(parseResult as NSDictionary, nil)
             }
         }
-        task!.resume()
+        task.resume()
     }
     
     func search(methodArguments: [String : AnyObject]) {
@@ -168,15 +165,19 @@ class RankTableViewController: UITableViewController {
                     let title = _series["title"]! as! String
                     let genreIds = _series["genreIds"]! as! String
                     let genreNames = _series["genreNames"]! as! String
-                    let ratingAverage = _series["ratingAverage"]! as! String
-                    let participant = _series["participant"]! as! String
+                    let ratingAverage: NSString = _series["ratingAverage"] as! String
+                    let participant = _series["participant"] as! String
                     let linkUrl = _series["linkUrl"]! as! String
                     
 //                    print("series: \(title)")
-                    self.seriesList.append(Series(seriesId: seriesId, title: title, genreIds: genreIds, genreNames: genreNames, ratingAverage: Double(ratingAverage)!, participant: Int(participant)!, linkUrl: linkUrl)!)
+                    let s = Series(seriesId: seriesId, title: title, genreIds: genreIds, genreNames: genreNames, ratingAverage: ratingAverage.doubleValue, participant: participant.toInt()!, linkUrl: linkUrl)!
+                    self.seriesList.append(s)
                 }
                 
-                self.tableView.reloadData()
+//                self.tableView.reloadData()
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.tableView.reloadData()
+                })
             }
         }
     }

@@ -13,7 +13,6 @@
 		ED6909281B4691330077E947 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6909271B4691330077E947 /* ViewController.swift */; };
 		ED69092B1B4691330077E947 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6909291B4691330077E947 /* Main.storyboard */; };
 		ED69092D1B4691330077E947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED69092C1B4691330077E947 /* Assets.xcassets */; };
-		ED6909301B4691330077E947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED69092E1B4691330077E947 /* LaunchScreen.storyboard */; };
 		EDC529191B5411AE0087866C /* hoppin.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDC529181B5411AE0087866C /* hoppin.plist */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +24,6 @@
 		ED6909271B4691330077E947 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ED69092A1B4691330077E947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED69092C1B4691330077E947 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ED69092F1B4691330077E947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED6909311B4691330077E947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDC529181B5411AE0087866C /* hoppin.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = hoppin.plist; path = ../hoppin.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,7 +63,6 @@
 				ED6909271B4691330077E947 /* ViewController.swift */,
 				ED6909291B4691330077E947 /* Main.storyboard */,
 				ED69092C1B4691330077E947 /* Assets.xcassets */,
-				ED69092E1B4691330077E947 /* LaunchScreen.storyboard */,
 				ED6909311B4691330077E947 /* Info.plist */,
 				ED38CC3A1B53F38A00F1A224 /* RankTableViewController.swift */,
 				ED38CC3E1B53F8CD00F1A224 /* Series.swift */,
@@ -131,7 +128,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC529191B5411AE0087866C /* hoppin.plist in Resources */,
-				ED6909301B4691330077E947 /* LaunchScreen.storyboard in Resources */,
 				ED69092D1B4691330077E947 /* Assets.xcassets in Resources */,
 				ED69092B1B4691330077E947 /* Main.storyboard in Resources */,
 			);
@@ -160,14 +156,6 @@
 				ED69092A1B4691330077E947 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ED69092E1B4691330077E947 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ED69092F1B4691330077E947 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -263,6 +251,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Tview/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.tview.Tview;
@@ -279,6 +268,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Tview/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.tview.Tview;

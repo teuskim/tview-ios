@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mOL-1N-AUf">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
     </dependencies>
     <scenes>
@@ -16,37 +17,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="30" translatesAutoresizingMaskIntoConstraints="NO" id="5zS-KQ-GIZ">
-                                <rect key="frame" x="150" y="285" width="300" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LM-PR-HKn">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
-                                        <state key="normal" title="순위"/>
-                                        <connections>
-                                            <segue destination="Mts-ff-chj" kind="show" id="JIG-db-Po7"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRR-6J-AMx">
-                                        <rect key="frame" x="100" y="0.0" width="100" height="30"/>
-                                        <state key="normal" title="TV편성표"/>
-                                        <connections>
-                                            <segue destination="8f5-IG-Pfc" kind="show" id="3is-dp-BXL"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3a-GW-vH7">
-                                        <rect key="frame" x="200" y="0.0" width="100" height="30"/>
-                                        <state key="normal" title="추천"/>
-                                        <connections>
-                                            <segue destination="7bL-VH-t1N" kind="show" id="ZgN-dq-4Dd"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRR-6J-AMx">
+                                <rect key="frame" x="400" y="285" width="100" height="30"/>
+                                <state key="normal" title="TV편성표"/>
+                                <connections>
+                                    <segue destination="8f5-IG-Pfc" kind="show" id="3is-dp-BXL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3a-GW-vH7">
+                                <rect key="frame" x="250" y="285" width="100" height="30"/>
+                                <state key="normal" title="추천"/>
+                                <connections>
+                                    <segue destination="7bL-VH-t1N" kind="show" id="ZgN-dq-4Dd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LM-PR-HKn">
+                                <rect key="frame" x="100" y="285" width="100" height="30"/>
+                                <state key="normal" title="순위"/>
+                                <connections>
+                                    <segue destination="Mts-ff-chj" kind="show" id="JIG-db-Po7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5zS-KQ-GIZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WF8-8U-j4B"/>
-                            <constraint firstItem="5zS-KQ-GIZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="joJ-AY-4hJ"/>
+                            <constraint firstItem="k3a-GW-vH7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4Ik-Xa-Pri"/>
+                            <constraint firstItem="WRR-6J-AMx" firstAttribute="leading" secondItem="k3a-GW-vH7" secondAttribute="trailing" constant="50" id="GKL-oW-OPo"/>
+                            <constraint firstItem="2LM-PR-HKn" firstAttribute="centerY" secondItem="k3a-GW-vH7" secondAttribute="centerY" id="LRK-Yq-TUA"/>
+                            <constraint firstItem="k3a-GW-vH7" firstAttribute="leading" secondItem="2LM-PR-HKn" secondAttribute="trailing" constant="50" id="Syg-Jf-Afg"/>
+                            <constraint firstItem="k3a-GW-vH7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VBw-Nb-Lbv"/>
+                            <constraint firstItem="WRR-6J-AMx" firstAttribute="centerY" secondItem="k3a-GW-vH7" secondAttribute="centerY" id="fOg-Vo-aeL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cO5-Eq-dEe"/>
