@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED2A40371B58E18C003C70FE /* SeriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A40361B58E18C003C70FE /* SeriesTableViewCell.swift */; };
 		ED38CC3B1B53F38A00F1A224 /* RankTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38CC3A1B53F38A00F1A224 /* RankTableViewController.swift */; };
 		ED38CC3F1B53F8CD00F1A224 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38CC3E1B53F8CD00F1A224 /* Series.swift */; };
 		ED6909261B4691330077E947 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6909251B4691330077E947 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED2A40361B58E18C003C70FE /* SeriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesTableViewCell.swift; sourceTree = "<group>"; };
 		ED38CC3A1B53F38A00F1A224 /* RankTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankTableViewController.swift; sourceTree = "<group>"; };
 		ED38CC3E1B53F8CD00F1A224 /* Series.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		ED6909221B4691330077E947 /* Tview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tview.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +79,7 @@
 				ED6909311B4691330077E947 /* Info.plist */,
 				ED38CC3A1B53F38A00F1A224 /* RankTableViewController.swift */,
 				ED38CC3E1B53F8CD00F1A224 /* Series.swift */,
+				ED2A40361B58E18C003C70FE /* SeriesTableViewCell.swift */,
 			);
 			path = Tview;
 			sourceTree = "<group>";
@@ -113,6 +116,7 @@
 				TargetAttributes = {
 					ED6909211B4691330077E947 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = H9U47XFWAD;
 					};
 				};
 			};
@@ -171,6 +175,7 @@
 			files = (
 				ED38CC3B1B53F38A00F1A224 /* RankTableViewController.swift in Sources */,
 				ED6909281B4691330077E947 /* ViewController.swift in Sources */,
+				ED2A40371B58E18C003C70FE /* SeriesTableViewCell.swift in Sources */,
 				ED38CC3F1B53F8CD00F1A224 /* Series.swift in Sources */,
 				ED6909261B4691330077E947 /* AppDelegate.swift in Sources */,
 			);
@@ -278,6 +283,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SK Planet Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,8 +297,10 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.tview.Tview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -300,6 +309,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SK Planet Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -311,7 +322,9 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.tview.Tview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

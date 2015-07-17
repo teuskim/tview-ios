@@ -61,11 +61,17 @@ class RankTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell: SeriesTableViewCell = tableView.dequeueReusableCellWithIdentifier("SeriesTableViewCell", forIndexPath: indexPath) as! SeriesTableViewCell
 
         // Configure the cell...
-        cell.textLabel?.text = seriesList[indexPath.row].title
-        cell.detailTextLabel?.text = String(seriesList[indexPath.row].genreNames)
+//        cell.textLabel?.text = seriesList[indexPath.row].title
+//        cell.detailTextLabel?.text = String(seriesList[indexPath.row].genreNames)
+        
+        cell.title.text = seriesList[indexPath.row].title
+        cell.genre.text = String(seriesList[indexPath.row].genreNames)
+        cell.rating.text = String(stringInterpolationSegment: seriesList[indexPath.row].ratingAverage)
+        cell.rank.text = String(indexPath.row + 1)
+        
         return cell
     }
 
