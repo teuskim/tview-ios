@@ -15,6 +15,8 @@
 		ED69092D1B4691330077E947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED69092C1B4691330077E947 /* Assets.xcassets */; };
 		ED9E716E1B579CCE000D9A4D /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED9E716D1B579CCE000D9A4D /* Launch Screen.xib */; };
 		EDC529191B5411AE0087866C /* hoppin.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDC529181B5411AE0087866C /* hoppin.plist */; };
+		EDFAE1331B58C56A00D5D0AC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFAE1311B58C56A00D5D0AC /* Fabric.framework */; };
+		EDFAE1341B58C56A00D5D0AC /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFAE1321B58C56A00D5D0AC /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		ED6909311B4691330077E947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED9E716D1B579CCE000D9A4D /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "../Launch Screen.xib"; sourceTree = "<group>"; };
 		EDC529181B5411AE0087866C /* hoppin.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = hoppin.plist; path = ../hoppin.plist; sourceTree = "<group>"; };
+		EDFAE1311B58C56A00D5D0AC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		EDFAE1321B58C56A00D5D0AC /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDFAE1341B58C56A00D5D0AC /* Crashlytics.framework in Frameworks */,
+				EDFAE1331B58C56A00D5D0AC /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,8 @@
 		ED6909191B4691330077E947 = {
 			isa = PBXGroup;
 			children = (
+				EDFAE1311B58C56A00D5D0AC /* Fabric.framework */,
+				EDFAE1321B58C56A00D5D0AC /* Crashlytics.framework */,
 				ED6909241B4691330077E947 /* Tview */,
 				ED6909231B4691330077E947 /* Products */,
 			);
@@ -83,6 +91,7 @@
 				ED69091E1B4691330077E947 /* Sources */,
 				ED69091F1B4691330077E947 /* Frameworks */,
 				ED6909201B4691330077E947 /* Resources */,
+				EDFAE1301B58C3B500D5D0AC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -138,6 +147,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EDFAE1301B58C3B500D5D0AC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 07d08311fca2a35b4df68873dfc756c2409ec2c6 ec628aaa7f60372392fa6e73ee0e70d0230e097669bdccf9d9f74bdf4363eb3a";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED69091E1B4691330077E947 /* Sources */ = {
@@ -253,6 +278,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Tview/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
@@ -270,6 +300,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Tview/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
