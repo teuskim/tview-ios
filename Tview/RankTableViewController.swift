@@ -17,12 +17,22 @@ let ORDER = "rankasc"
 
 var APP_KEY = ""
 
-class RankTableViewController: UITableViewController {
+class RankTableViewController: UITableViewController, UISearchControllerDelegate, UISearchResultsUpdating {
     
     var seriesList = [Series]()
+    var filtered = [Series]()
+    
+    var searchController: UISearchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // setup the search controller
+        searchController.searchResultsUpdater = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.sizeToFit()
+        self.tableView.tableHeaderView = searchController.searchBar
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -57,7 +67,11 @@ class RankTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return seriesList.count
+        if self.searchController.searchBar.text != "" {
+            return self.filtered.count
+        } else {
+            return seriesList.count
+        }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -67,9 +81,16 @@ class RankTableViewController: UITableViewController {
 //        cell.textLabel?.text = seriesList[indexPath.row].title
 //        cell.detailTextLabel?.text = String(seriesList[indexPath.row].genreNames)
         
-        cell.title.text = seriesList[indexPath.row].title
-        cell.genre.text = String(seriesList[indexPath.row].genreNames)
-        cell.rating.text = String(stringInterpolationSegment: seriesList[indexPath.row].ratingAverage)
+        var series: Series
+        if self.searchController.searchBar.text != "" {
+            series = filtered[indexPath.row]
+        } else {
+            series = seriesList[indexPath.row]
+        }
+        
+        cell.title.text = series.title
+        cell.genre.text = String(series.genreNames)
+        cell.rating.text = String(stringInterpolationSegment: series.ratingAverage)
         cell.rank.text = String(indexPath.row + 1)
         
         return cell
@@ -211,5 +232,16 @@ class RankTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        var searchText = searchController.searchBar.text
+        if (searchText != "") {
+            self.filtered = self.seriesList.filter { (series: Series) -> Bool in
+                let stringMatch = series.title.rangeOfString(searchText)
+                return (stringMatch != nil)
+            }
+            self.tableView.reloadData()
+        }
+    }
 
 }
