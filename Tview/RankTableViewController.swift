@@ -29,7 +29,7 @@ class RankTableViewController: UITableViewController, UISearchControllerDelegate
         
         // setup the search controller
         searchController.searchResultsUpdater = self
-        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = true
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.sizeToFit()
         self.tableView.tableHeaderView = searchController.searchBar
@@ -240,8 +240,8 @@ class RankTableViewController: UITableViewController, UISearchControllerDelegate
                 let stringMatch = series.title.rangeOfString(searchText)
                 return (stringMatch != nil)
             }
-            self.tableView.reloadData()
         }
+        self.tableView.reloadData()
     }
 
 }
