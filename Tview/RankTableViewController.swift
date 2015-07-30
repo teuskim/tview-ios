@@ -11,7 +11,7 @@ import UIKit
 let BASE_URL = "http://apis.skplanetx.com/hoppin/tvseries"
 let VERSION = 1
 let PAGE = 1
-let COUNT = 10
+let COUNT = 20
 let GENRE_ID = ""
 let ORDER = "rankasc"
 
