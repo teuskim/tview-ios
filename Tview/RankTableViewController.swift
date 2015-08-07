@@ -174,19 +174,22 @@ class RankTableViewController: UITableViewController, UISearchControllerDelegate
         request.addValue(APP_KEY, forHTTPHeaderField: "appKey")
         request.HTTPMethod = "GET"
         
-//        let headers: NSDictionary = request.allHTTPHeaderFields!
-//        print(headers)
-        
         httpGet(request) {
             (data, error) -> Void in
             if error != nil {
                 print(error)
+                return
+            } else if (data["error"] != nil) {
+                let error = data["error"] as! NSDictionary
+                let message = error["message"] as! String
+                var alert = UIAlertView(title: "Error", message: message, delegate: self, cancelButtonTitle: "Close")
+                alert.show()
+                return
             } else {
-//                print(data)
                 let hoppin = data["hoppin"]! as! [String : AnyObject]
                 let _seriesList = hoppin["seriesList"]! as! [String : AnyObject]
                 let series = _seriesList["series"]! as! [AnyObject]
-                
+            
                 for _series in series {
                     let seriesId = _series["seriesId"]! as! String
                     let title = _series["title"]! as! String
@@ -195,13 +198,10 @@ class RankTableViewController: UITableViewController, UISearchControllerDelegate
                     let ratingAverage: NSString = _series["ratingAverage"] as! String
                     let participant = _series["participant"] as! String
                     let linkUrl = _series["linkUrl"]! as! String
-                    
-//                    print("series: \(title)")
                     let s = Series(seriesId: seriesId, title: title, genreIds: genreIds, genreNames: genreNames, ratingAverage: ratingAverage.doubleValue, participant: participant.toInt()!, linkUrl: linkUrl)!
                     self.seriesList.append(s)
                 }
-                
-//                self.tableView.reloadData()
+            
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.tableView.reloadData()
                 })
