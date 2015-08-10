@@ -241,7 +241,7 @@
                     <navigationItem key="navigationItem" id="j4S-Hs-I6G">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Fsa-YO-q3z">
                             <connections>
-                                <segue destination="YfO-ND-pSE" kind="show" id="ynv-xF-AbI"/>
+                                <segue destination="SK3-lr-QfF" kind="show" id="ynv-xF-AbI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -250,10 +250,10 @@
             </objects>
             <point key="canvasLocation" x="1200" y="2601"/>
         </scene>
-        <!--View Controller-->
+        <!--Review View Controller-->
         <scene sceneID="ks4-My-uch">
             <objects>
-                <viewController id="YfO-ND-pSE" sceneMemberID="viewController">
+                <viewController id="YfO-ND-pSE" customClass="ReviewViewController" customModule="Tview" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ux9-eM-XzJ"/>
                         <viewControllerLayoutGuide type="bottom" id="k6w-1V-HU5"/>
@@ -283,7 +283,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Vw-Ny-GxV">
                                 <rect key="frame" x="0.0" y="64" width="600" height="444"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -298,10 +297,21 @@
                             <constraint firstItem="zrK-cc-WMg" firstAttribute="leading" secondItem="jqb-UX-uPH" secondAttribute="leadingMargin" constant="-16" id="ziq-9U-klD"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PHZ-Ga-r0a">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="vfJ-h7-v7j">
+                            <connections>
+                                <action selector="save:" destination="YfO-ND-pSE" id="MwK-Iy-Cus"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="comment" destination="3Vw-Ny-GxV" id="LPQ-O6-exa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHq-hl-aJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="2644"/>
+            <point key="canvasLocation" x="2701" y="2644"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cxy-cL-zAz">
@@ -320,6 +330,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avH-l1-UX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1192" y="1889"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WGW-fb-9k2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SK3-lr-QfF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zKr-TM-sic">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YfO-ND-pSE" kind="relationship" relationship="rootViewController" id="48F-01-Emy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZt-kL-ITZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1889" y="2644"/>
         </scene>
     </scenes>
 </document>

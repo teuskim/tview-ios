@@ -7,18 +7,37 @@
 //
 
 import UIKit
+
 import Fabric
 import Crashlytics
+
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var parseApplicationId = ""
+    var parseClientKey = ""
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         Fabric.with([Crashlytics()])
+
+        initializeKeys()
+        
+        // [Optional] Power your app with Local Datastore. For more info, go to
+        // https://parse.com/docs/ios_guide#localdatastore/iOS
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId(parseApplicationId, clientKey: parseClientKey)
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
         return true
     }
 
@@ -42,6 +61,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func initializeKeys() {
+        
+        var keys: NSDictionary?
+        if let path = NSBundle.mainBundle().pathForResource("keys", ofType: "plist") {
+            keys = NSDictionary(contentsOfFile: path)
+        }
+        if let dict = keys {
+            parseApplicationId = dict["ParseApplicationID"] as! String
+            parseClientKey = dict["ParseClientKey"] as! String
+        }
+        
     }
 
 

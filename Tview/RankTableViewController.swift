@@ -40,14 +40,12 @@ class RankTableViewController: UITableViewController, UISearchControllerDelegate
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        var hoppin: NSDictionary?
-        if let path = NSBundle.mainBundle().pathForResource("hoppin", ofType: "plist") {
-            hoppin = NSDictionary(contentsOfFile: path)
+        var keys: NSDictionary?
+        if let path = NSBundle.mainBundle().pathForResource("keys", ofType: "plist") {
+            keys = NSDictionary(contentsOfFile: path)
         }
-        if let dict = hoppin {
-            // Use your dict here
-            APP_KEY = dict["APP_KEY"] as! String
-//            print(APP_KEY)
+        if let dict = keys {
+            APP_KEY = dict["HoppinAppKey"] as! String
         }
         
         searchSeries()
