@@ -37,9 +37,10 @@ class ReviewViewController: UIViewController {
     */
     
     @IBAction func save(sender: UIBarButtonItem) {
-        let reviewObject = PFObject(className: "Review")
-        reviewObject["comment"] = comment.text
-        reviewObject.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
+        let review = PFObject(className: "Review")
+        review["comment"] = comment.text
+        review["author"] = "anonymous"
+        review.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
             var alert: UIAlertView
             if (success) {
                 let message = "Object has been saved."

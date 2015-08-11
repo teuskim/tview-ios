@@ -29,6 +29,8 @@
 		ED69092B1B4691330077E947 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6909291B4691330077E947 /* Main.storyboard */; };
 		ED69092D1B4691330077E947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED69092C1B4691330077E947 /* Assets.xcassets */; };
 		ED9E716E1B579CCE000D9A4D /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED9E716D1B579CCE000D9A4D /* Launch Screen.xib */; };
+		EDA3246C1B79DA860045CCA7 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3246B1B79DA860045CCA7 /* ReviewTableViewController.swift */; };
+		EDA3246E1B79DAD80045CCA7 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3246D1B79DAD80045CCA7 /* Review.swift */; };
 		EDC529191B5411AE0087866C /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDC529181B5411AE0087866C /* keys.plist */; };
 		EDFAE1331B58C56A00D5D0AC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFAE1311B58C56A00D5D0AC /* Fabric.framework */; };
 		EDFAE1341B58C56A00D5D0AC /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFAE1321B58C56A00D5D0AC /* Crashlytics.framework */; };
@@ -59,6 +61,8 @@
 		ED69092C1B4691330077E947 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED6909311B4691330077E947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED9E716D1B579CCE000D9A4D /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "../Launch Screen.xib"; sourceTree = "<group>"; };
+		EDA3246B1B79DA860045CCA7 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
+		EDA3246D1B79DAD80045CCA7 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		EDC529181B5411AE0087866C /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = keys.plist; path = ../keys.plist; sourceTree = "<group>"; };
 		EDFAE1311B58C56A00D5D0AC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		EDFAE1321B58C56A00D5D0AC /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 				ED38CC3E1B53F8CD00F1A224 /* Series.swift */,
 				ED2A40361B58E18C003C70FE /* SeriesTableViewCell.swift */,
 				ED5E6A0D1B78509C006180A5 /* ReviewViewController.swift */,
+				EDA3246B1B79DA860045CCA7 /* ReviewTableViewController.swift */,
+				EDA3246D1B79DAD80045CCA7 /* Review.swift */,
 			);
 			path = Tview;
 			sourceTree = "<group>";
@@ -229,9 +235,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED38CC3B1B53F38A00F1A224 /* RankTableViewController.swift in Sources */,
+				EDA3246E1B79DAD80045CCA7 /* Review.swift in Sources */,
 				ED6909281B4691330077E947 /* ViewController.swift in Sources */,
 				ED5E6A0E1B78509C006180A5 /* ReviewViewController.swift in Sources */,
 				ED2A40371B58E18C003C70FE /* SeriesTableViewCell.swift in Sources */,
+				EDA3246C1B79DA860045CCA7 /* ReviewTableViewController.swift in Sources */,
 				ED38CC3F1B53F8CD00F1A224 /* Series.swift in Sources */,
 				ED6909261B4691330077E947 /* AppDelegate.swift in Sources */,
 			);
