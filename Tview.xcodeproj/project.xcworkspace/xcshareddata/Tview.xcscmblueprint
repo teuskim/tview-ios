@@ -4,13 +4,11 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "2DD8CB35EC011A490ECD9E929EF3FE74BDE26F79" : 0,
-    "469C834A1FFCA359FB57C4F3CF7AD63747A60E61" : 0
+    "2DD8CB35EC011A490ECD9E929EF3FE74BDE26F79" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "46164AD3-9C4D-487D-8C39-3AA28D0927A5",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "2DD8CB35EC011A490ECD9E929EF3FE74BDE26F79" : "Tview\/",
-    "469C834A1FFCA359FB57C4F3CF7AD63747A60E61" : "..\/..\/git\/planetx-ios-sdk"
+    "2DD8CB35EC011A490ECD9E929EF3FE74BDE26F79" : "Tview\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Tview",
   "DVTSourceControlWorkspaceBlueprintVersion" : 203,
@@ -20,11 +18,6 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:daclouds\/tview-ios.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2DD8CB35EC011A490ECD9E929EF3FE74BDE26F79"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:skplanetx\/planetx-ios-sdk.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "469C834A1FFCA359FB57C4F3CF7AD63747A60E61"
     }
   ]
 }
