@@ -21,6 +21,9 @@ class ReviewViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let review = review {
+            comment.text = review.comment
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +39,7 @@ class ReviewViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if saveButton === sender {
-            review = Review(comment: comment.text, author: "anonymous")
+            review = Review(objectId: "", comment: comment.text, author: "anonymous")
         }
     }
     
@@ -54,6 +57,17 @@ class ReviewViewController: UIViewController {
             }
             alert.show()
         })
+    }
+    
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
+        let isPresentingInAddReviewMode = presentingViewController is UINavigationController
+        if isPresentingInAddReviewMode {
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            navigationController!.popViewControllerAnimated(true)
+        }
+
     }
     
 }

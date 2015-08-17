@@ -9,10 +9,13 @@
 import UIKit
 
 class Review {
+    
+    var objectId: String
     var comment: String
     var author: String
     
-    init?(comment: String, author: String) {
+    init?(objectId: String, comment: String, author: String) {
+        self.objectId = objectId
         self.comment = comment
         self.author = author
     }

@@ -258,7 +258,7 @@
                     <navigationItem key="navigationItem" id="j4S-Hs-I6G">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Fsa-YO-q3z">
                             <connections>
-                                <segue destination="Uhf-KF-sx5" kind="show" id="pcJ-HF-dJb"/>
+                                <segue destination="Uhf-KF-sx5" kind="presentation" identifier="AddItem" id="pcJ-HF-dJb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -316,6 +316,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="PHZ-Ga-r0a">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="x61-fe-9gn">
+                            <connections>
+                                <action selector="cancel:" destination="YfO-ND-pSE" id="BTS-EW-hgh"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="vfJ-h7-v7j">
                             <connections>
                                 <action selector="save:" destination="YfO-ND-pSE" id="MwK-Iy-Cus"/>
