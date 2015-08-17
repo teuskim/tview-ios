@@ -245,6 +245,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="YfO-ND-pSE" kind="show" identifier="ShowDetail" id="xVS-UE-J3Y"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -255,7 +258,7 @@
                     <navigationItem key="navigationItem" id="j4S-Hs-I6G">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Fsa-YO-q3z">
                             <connections>
-                                <segue destination="SK3-lr-QfF" kind="show" id="ynv-xF-AbI"/>
+                                <segue destination="Uhf-KF-sx5" kind="show" id="pcJ-HF-dJb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -276,15 +279,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrK-cc-WMg">
-                                <rect key="frame" x="0.0" y="516" width="120" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="zrK-cc-WMg" secondAttribute="height" multiplier="3:1" id="LOA-62-i7w"/>
-                                </constraints>
-                                <state key="normal" title="Like">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQu-Fc-SuA">
                                 <rect key="frame" x="480" y="516" width="120" height="40"/>
                                 <constraints>
@@ -300,15 +294,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrK-cc-WMg">
+                                <rect key="frame" x="352" y="516" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zrK-cc-WMg" secondAttribute="height" multiplier="3:1" id="LOA-62-i7w"/>
+                                </constraints>
+                                <state key="normal" title="Like">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3Vw-Ny-GxV" firstAttribute="leading" secondItem="jqb-UX-uPH" secondAttribute="leadingMargin" constant="-16" id="KyL-Uu-wp5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3Vw-Ny-GxV" secondAttribute="trailing" constant="-16" id="Lr1-np-3Lb"/>
                             <constraint firstItem="zrK-cc-WMg" firstAttribute="top" secondItem="3Vw-Ny-GxV" secondAttribute="bottom" constant="8" id="Zss-uo-DmY"/>
+                            <constraint firstItem="UQu-Fc-SuA" firstAttribute="leading" secondItem="zrK-cc-WMg" secondAttribute="trailing" constant="8" id="lWm-Au-BTf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UQu-Fc-SuA" secondAttribute="trailing" constant="-16" id="sID-gz-NFh"/>
                             <constraint firstItem="3Vw-Ny-GxV" firstAttribute="top" secondItem="Ux9-eM-XzJ" secondAttribute="bottom" id="u83-FN-A5O"/>
-                            <constraint firstItem="zrK-cc-WMg" firstAttribute="leading" secondItem="jqb-UX-uPH" secondAttribute="leadingMargin" constant="-16" id="ziq-9U-klD"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -316,16 +319,19 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="vfJ-h7-v7j">
                             <connections>
                                 <action selector="save:" destination="YfO-ND-pSE" id="MwK-Iy-Cus"/>
+                                <segue destination="XPM-fw-hcb" kind="unwind" unwindAction="unwindToMealList:" id="iwm-Ym-PHp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="comment" destination="3Vw-Ny-GxV" id="LPQ-O6-exa"/>
+                        <outlet property="saveButton" destination="vfJ-h7-v7j" id="IRK-4e-UVa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHq-hl-aJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="XPM-fw-hcb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2701" y="2644"/>
+            <point key="canvasLocation" x="2779" y="2601"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cxy-cL-zAz">
@@ -346,22 +352,25 @@
             <point key="canvasLocation" x="1192" y="1889"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="WGW-fb-9k2">
+        <scene sceneID="BdQ-7t-jdO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SK3-lr-QfF" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uhf-KF-sx5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zKr-TM-sic">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="abM-gs-aaL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="YfO-ND-pSE" kind="relationship" relationship="rootViewController" id="48F-01-Emy"/>
+                        <segue destination="YfO-ND-pSE" kind="relationship" relationship="rootViewController" id="B04-cf-azG"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TZt-kL-ITZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNq-JI-wLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="2644"/>
+            <point key="canvasLocation" x="2001" y="3051"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xVS-UE-J3Y"/>
+    </inferredMetricsTieBreakers>
 </document>

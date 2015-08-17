@@ -121,5 +121,14 @@ class ReviewTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? ReviewViewController, review = sourceViewController.review {
+            // Add a new review.
+            let newIndexPath = NSIndexPath(forRow: reviews.count, inSection: 0)
+            reviews.append(review)
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+        }
+    }
 
 }

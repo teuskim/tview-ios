@@ -13,6 +13,9 @@ import Parse
 class ReviewViewController: UIViewController {
     
     @IBOutlet weak var comment: UITextView!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    var review = Review?()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,15 +29,16 @@ class ReviewViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if saveButton === sender {
+            review = Review(comment: comment.text, author: "anonymous")
+        }
     }
-    */
     
     @IBAction func save(sender: UIBarButtonItem) {
         let review = PFObject(className: "Review")
@@ -51,5 +55,5 @@ class ReviewViewController: UIViewController {
             alert.show()
         })
     }
-
+    
 }
