@@ -44,16 +44,18 @@ class RecommendTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 0
+        return recommends.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "RecommendTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RecommendTableViewCell
 
-        // Configure the cell...
+        let rec = recommends[indexPath.row]
+        cell.titleView.text = rec.title
+        let url = NSURL(string: rec.imageUrl)
+        let data = NSData(contentsOfURL: url!)
+        cell.recommendImageView.image = UIImage(data: data!)
 
         return cell
     }
