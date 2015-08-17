@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481819951B81CD5000228DE9 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 481819941B81CD5000228DE9 /* keys.plist */; };
+		48BD22871B81F52C00DB2550 /* Recommend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BD22861B81F52C00DB2550 /* Recommend.swift */; };
+		48BD22891B81F80800DB2550 /* RecommendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BD22881B81F80800DB2550 /* RecommendTableViewController.swift */; };
+		48BD228B1B81F8B700DB2550 /* RecommendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BD228A1B81F8B700DB2550 /* RecommendTableViewCell.swift */; };
 		ED2A40371B58E18C003C70FE /* SeriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A40361B58E18C003C70FE /* SeriesTableViewCell.swift */; };
 		ED38CC3B1B53F38A00F1A224 /* RankTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38CC3A1B53F38A00F1A224 /* RankTableViewController.swift */; };
 		ED38CC3F1B53F8CD00F1A224 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38CC3E1B53F8CD00F1A224 /* Series.swift */; };
@@ -31,12 +35,15 @@
 		ED9E716E1B579CCE000D9A4D /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED9E716D1B579CCE000D9A4D /* Launch Screen.xib */; };
 		EDA3246C1B79DA860045CCA7 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3246B1B79DA860045CCA7 /* ReviewTableViewController.swift */; };
 		EDA3246E1B79DAD80045CCA7 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3246D1B79DAD80045CCA7 /* Review.swift */; };
-		EDC529191B5411AE0087866C /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDC529181B5411AE0087866C /* keys.plist */; };
 		EDFAE1331B58C56A00D5D0AC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFAE1311B58C56A00D5D0AC /* Fabric.framework */; };
 		EDFAE1341B58C56A00D5D0AC /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFAE1321B58C56A00D5D0AC /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		481819941B81CD5000228DE9 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		48BD22861B81F52C00DB2550 /* Recommend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recommend.swift; sourceTree = "<group>"; };
+		48BD22881B81F80800DB2550 /* RecommendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendTableViewController.swift; sourceTree = "<group>"; };
+		48BD228A1B81F8B700DB2550 /* RecommendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendTableViewCell.swift; sourceTree = "<group>"; };
 		ED2A40361B58E18C003C70FE /* SeriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesTableViewCell.swift; sourceTree = "<group>"; };
 		ED38CC3A1B53F38A00F1A224 /* RankTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankTableViewController.swift; sourceTree = "<group>"; };
 		ED38CC3E1B53F8CD00F1A224 /* Series.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
@@ -63,7 +70,6 @@
 		ED9E716D1B579CCE000D9A4D /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "../Launch Screen.xib"; sourceTree = "<group>"; };
 		EDA3246B1B79DA860045CCA7 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		EDA3246D1B79DAD80045CCA7 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
-		EDC529181B5411AE0087866C /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = keys.plist; path = ../keys.plist; sourceTree = "<group>"; };
 		EDFAE1311B58C56A00D5D0AC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		EDFAE1321B58C56A00D5D0AC /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				ED9E716D1B579CCE000D9A4D /* Launch Screen.xib */,
-				EDC529181B5411AE0087866C /* keys.plist */,
 				ED5E6A0F1B785453006180A5 /* keys.plist_ */,
 				ED6909251B4691330077E947 /* AppDelegate.swift */,
 				ED6909271B4691330077E947 /* ViewController.swift */,
@@ -140,6 +145,10 @@
 				ED5E6A0D1B78509C006180A5 /* ReviewViewController.swift */,
 				EDA3246B1B79DA860045CCA7 /* ReviewTableViewController.swift */,
 				EDA3246D1B79DAD80045CCA7 /* Review.swift */,
+				481819941B81CD5000228DE9 /* keys.plist */,
+				48BD22861B81F52C00DB2550 /* Recommend.swift */,
+				48BD22881B81F80800DB2550 /* RecommendTableViewController.swift */,
+				48BD228A1B81F8B700DB2550 /* RecommendTableViewCell.swift */,
 			);
 			path = Tview;
 			sourceTree = "<group>";
@@ -204,7 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED5E6A101B785453006180A5 /* keys.plist_ in Resources */,
-				EDC529191B5411AE0087866C /* keys.plist in Resources */,
+				481819951B81CD5000228DE9 /* keys.plist in Resources */,
 				ED9E716E1B579CCE000D9A4D /* Launch Screen.xib in Resources */,
 				ED69092D1B4691330077E947 /* Assets.xcassets in Resources */,
 				ED69092B1B4691330077E947 /* Main.storyboard in Resources */,
@@ -236,11 +245,14 @@
 			files = (
 				ED38CC3B1B53F38A00F1A224 /* RankTableViewController.swift in Sources */,
 				EDA3246E1B79DAD80045CCA7 /* Review.swift in Sources */,
+				48BD22871B81F52C00DB2550 /* Recommend.swift in Sources */,
 				ED6909281B4691330077E947 /* ViewController.swift in Sources */,
 				ED5E6A0E1B78509C006180A5 /* ReviewViewController.swift in Sources */,
+				48BD228B1B81F8B700DB2550 /* RecommendTableViewCell.swift in Sources */,
 				ED2A40371B58E18C003C70FE /* SeriesTableViewCell.swift in Sources */,
 				EDA3246C1B79DA860045CCA7 /* ReviewTableViewController.swift in Sources */,
 				ED38CC3F1B53F8CD00F1A224 /* Series.swift in Sources */,
+				48BD22891B81F80800DB2550 /* RecommendTableViewController.swift in Sources */,
 				ED6909261B4691330077E947 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
